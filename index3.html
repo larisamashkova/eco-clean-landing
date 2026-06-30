@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Семейный набор эко-средств | Эко-Чистота</title>
+  <meta name="description" content="Семейный набор экологичных средств для уборки. Два комплекта с выгодой 25%. Безопасно для детей и животных. Бесплатная доставка.">
+  <meta property="og:title" content="Эко-уборка для всей семьи — с выгодой 25%">
+  <meta property="og:description" content="Семейный набор: два комплекта безопасных средств для уборки. Скидка 25% + бесплатная доставка.">
+  <meta property="og:image" content="image 8.jfif">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%234CAF50'/%3E%3Cpath d='M16 6C11 6 8 10 8 14c0 5 4 12 8 12s8-7 8-12c0-4-3-8-8-8z' fill='white'/%3E%3Cpath d='M14 12l2 3 4-2' fill='none' stroke='%234CAF50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root { --primary: #4CAF50; --primary-dark: #1B5E20; }
+
+    .hero-ab {
+      position: relative; min-height: 100vh; display: flex; align-items: center;
+      overflow: hidden;
+    }
+    .hero-ab-bg {
+      position: absolute; inset: 0;
+    }
+    .hero-ab-bg img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .hero-ab-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(27,94,32,0.92) 0%, rgba(56,142,60,0.85) 50%, rgba(76,175,80,0.78) 100%);
+    }
+    .hero-ab-inner {
+      position: relative; z-index: 1; width: 100%; padding: 120px 24px 80px;
+    }
+    .hero-ab .container { max-width: 800px; margin: 0 auto; text-align: center; }
+    .hero-ab-badge {
+      display: inline-block; background: rgba(255,255,255,0.15); color: #fff;
+      padding: 8px 20px; border-radius: 24px; font-size: 14px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .hero-ab-title {
+      font-size: 56px; font-weight: 800; color: #fff; line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero-ab-subtitle {
+      font-size: 22px; color: rgba(255,255,255,0.85); margin-bottom: 32px;
+      max-width: 600px; margin-left: auto; margin-right: auto;
+    }
+    .hero-ab-pricing {
+      display: flex; align-items: center; justify-content: center; gap: 16px;
+      margin-bottom: 12px; flex-wrap: wrap;
+    }
+    .hero-ab-pricing .price-current {
+      font-size: 52px; color: #fff;
+    }
+    .hero-ab-pricing .price-old {
+      font-size: 28px; color: rgba(255,255,255,0.5);
+    }
+    .hero-ab-discount {
+      display: inline-flex; align-items: center;
+      background: #FF6B35; color: #fff; font-weight: 700; font-size: 16px;
+      padding: 6px 16px; border-radius: 8px;
+    }
+    .hero-ab-save {
+      font-size: 18px; color: #A5D6A7; font-weight: 500; margin-bottom: 28px;
+    }
+    .hero-ab-timer {
+      display: flex; align-items: center; justify-content: center; gap: 16px;
+      margin-bottom: 28px; color: rgba(255,255,255,0.9); font-size: 16px;
+    }
+    .timer-item {
+      display: flex; flex-direction: column; align-items: center;
+      background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 10px;
+      min-width: 60px;
+    }
+    .timer-num { font-size: 28px; font-weight: 800; color: #fff; line-height: 1; }
+    .timer-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; margin-top: 2px; }
+    .timer-sep { font-size: 28px; font-weight: 700; color: rgba(255,255,255,0.5); }
+    .hero-ab-trust {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+      margin-top: 32px; color: rgba(255,255,255,0.75); font-size: 15px;
+    }
+    .hero-ab-trust span { display: flex; align-items: center; gap: 6px; }
+
+    .ab-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 20px 48px; font-size: 20px; font-weight: 700;
+      background: #FF6B35; color: #fff; border: none; border-radius: 16px;
+      cursor: pointer; transition: all 0.3s ease; font-family: inherit;
+      box-shadow: 0 8px 32px rgba(255,107,53,0.4);
+      animation: ab-pulse 2s infinite;
+    }
+    .ab-btn:hover {
+      background: #E55A25; transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(255,107,53,0.55);
+    }
+    @keyframes ab-pulse {
+      0% { box-shadow: 0 8px 32px rgba(255,107,53,0.4); }
+      50% { box-shadow: 0 8px 48px rgba(255,107,53,0.65); }
+      100% { box-shadow: 0 8px 32px rgba(255,107,53,0.4); }
+    }
+
+    .section-ab { padding: 80px 0; }
+
+    .comparison-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    }
+    .comparison-card {
+      padding: 40px 32px; border-radius: 20px; transition: all 0.4s ease;
+    }
+    .comparison-card.bad {
+      background: #F5F5F5; border: 1px solid #E0E0E0;
+    }
+    .comparison-card.good {
+      background: #F1F8E9; border: 2px solid #4CAF50;
+      box-shadow: 0 8px 32px rgba(76,175,80,0.12);
+    }
+    .comparison-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 16px; }
+    .comparison-card.bad h3 { color: #999; }
+    .comparison-card.good h3 { color: #2E7D32; }
+    .comparison-card ul { display: flex; flex-direction: column; gap: 10px; }
+    .comparison-card li {
+      display: flex; align-items: center; gap: 10px; font-size: 17px; color: #555;
+    }
+    .comparison-card.good li { color: #333; }
+
+    .value-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .value-card {
+      text-align: center; padding: 32px 24px;
+      background: #fff; border: 1px solid #E8F5E9; border-radius: 20px;
+      transition: all 0.4s ease;
+    }
+    .value-card:hover {
+      transform: translateY(-6px); box-shadow: 0 12px 32px rgba(76,175,80,0.1);
+    }
+    .value-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; color: #222; }
+    .value-card p { font-size: 17px; color: #666; }
+
+    .content-card {
+      border-radius: 16px; overflow: hidden; border: 1px solid #E8F5E9;
+      transition: all 0.4s ease; background: #F9FBF9;
+    }
+    .content-card:hover {
+      transform: translateY(-6px); box-shadow: 0 12px 32px rgba(76,175,80,0.1);
+    }
+    .contents-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .content-card h3 { font-size: 18px; font-weight: 700; padding: 16px 20px 4px; color: #222; }
+    .content-card p { font-size: 15px; color: #888; padding: 0 20px 20px; }
+
+    .faq-grid {
+      max-width: 800px; margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid #E8F5E9; padding: 20px 0;
+    }
+    .faq-q {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 19px; font-weight: 600; color: #222; cursor: pointer;
+      background: none; border: none; width: 100%; text-align: left; font-family: inherit; padding: 0;
+    }
+    .faq-q svg { transition: transform 0.3s; flex-shrink: 0; }
+    .faq-q.active svg { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+      font-size: 17px; color: #666; line-height: 1.6;
+    }
+    .faq-a.open { max-height: 300px; padding-top: 16px; }
+
+    .offer-banner {
+      background: linear-gradient(135deg, #1B5E20, #2E7D32); color: #fff;
+      padding: 60px 0;
+    }
+    .offer-banner .section-title { color: #fff; }
+    .offer-banner-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 40px;
+    }
+    .offer-banner-left { flex: 1; }
+    .offer-banner-right { flex-shrink: 0; }
+
+    .header-ab {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(27,94,32,0.95); backdrop-filter: blur(12px);
+      padding: 12px 0;
+    }
+    .header-ab .logo { color: #fff; }
+    .header-ab .logo-accent { color: #A5D6A7; }
+    .header-ab .nav a { color: rgba(255,255,255,0.8); }
+    .header-ab .nav a::after { background: #A5D6A7; }
+    .header-ab .nav a:hover { color: #fff; }
+    .header-ab .btn-primary {
+      background: #FF6B35; border-color: #FF6B35;
+      box-shadow: 0 4px 14px rgba(255,107,53,0.35);
+    }
+    .header-ab .btn-primary:hover {
+      background: #E55A25; border-color: #E55A25;
+    }
+
+    .footer-ab {
+      background: #1B5E20; color: rgba(255,255,255,0.7); padding: 60px 0 0;
+    }
+
+    .sticky-ab {
+      position: fixed; bottom: 24px; right: 24px; z-index: 99;
+      padding: 16px 28px; font-size: 16px; border-radius: 50px;
+      background: #FF6B35; color: #fff; font-weight: 600;
+      box-shadow: 0 8px 32px rgba(255,107,53,0.4);
+      animation: ab-pulse 2s infinite; display: flex; align-items: center; gap: 8px;
+      border: none; cursor: pointer; font-family: inherit;
+    }
+    .sticky-ab:hover { transform: translateY(-2px); }
+
+    @media (max-width: 768px) {
+      .hero-ab-title { font-size: 34px; }
+      .hero-ab-subtitle { font-size: 18px; }
+      .hero-ab-pricing .price-current { font-size: 36px; }
+      .hero-ab-pricing .price-old { font-size: 20px; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .value-grid { grid-template-columns: 1fr; }
+      .contents-grid { grid-template-columns: repeat(2, 1fr); }
+      .offer-banner-inner { flex-direction: column; text-align: center; }
+      .sticky-ab { display: none; }
+    }
+    @media (max-width: 480px) {
+      .hero-ab-title { font-size: 28px; }
+      .hero-ab .container { padding: 0 16px; }
+      .hero-ab-inner { padding: 100px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header header-ab">
+  <div class="header-inner container">
+    <a href="#" class="logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" fill="#4CAF50"/>
+        <path d="M16 6C11 6 8 10 8 14c0 5 4 12 8 12s8-7 8-12c0-4-3-8-8-8z" fill="white" opacity="0.9"/>
+        <path d="M13 15l2 2 4-4" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Эко<span class="logo-accent">Чистота</span></span>
+    </a>
+    <nav class="nav">
+      <a href="#compare">Сравнение</a>
+      <a href="#value">Выгода</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a href="#order-ab" class="btn btn-sm btn-primary">Заказать</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero-ab" id="hero-ab">
+    <div class="hero-ab-bg">
+      <img src="image 3.jpeg" alt="Семейная уборка" loading="eager">
+    </div>
+    <div class="hero-ab-overlay"></div>
+    <div class="hero-ab-inner">
+      <div class="container">
+        <div class="hero-ab-badge">Семейный набор</div>
+        <h1 class="hero-ab-title">Чистота для всей семьи<br>без вредной химии</h1>
+        <p class="hero-ab-subtitle">Два полноценных комплекта экологичных средств — для дома и дачи. С запасом на месяц.</p>
+        <div class="hero-ab-pricing">
+          <span class="price-current">2 100 ZCN</span>
+          <span class="price-old">2 800 ZCN</span>
+          <span class="hero-ab-discount">−25%</span>
+        </div>
+        <p class="hero-ab-save">Экономия 700 ZCN + бесплатная доставка</p>
+        <div class="hero-ab-timer">
+          <span>Предложение действует:</span>
+          <div class="timer-item"><span class="timer-num" id="timer-hours">23</span><span class="timer-label">часа</span></div>
+          <span class="timer-sep">:</span>
+          <div class="timer-item"><span class="timer-num" id="timer-minutes">59</span><span class="timer-label">мин</span></div>
+          <span class="timer-sep">:</span>
+          <div class="timer-item"><span class="timer-num" id="timer-seconds">59</span><span class="timer-label">сек</span></div>
+        </div>
+        <a href="#order-ab" class="ab-btn">
+          Заказать семейный набор
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+        <div class="hero-ab-trust">
+          <span>✓ 2 полных комплекта</span>
+          <span>✓ Бесплатная доставка</span>
+          <span>✓ Экономия 700 ZCN</span>
+          <span>✓ Гарантия 30 дней</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-ab" id="compare" style="background:#F9FBF9;">
+    <div class="container">
+      <div class="section-label">Сравнение</div>
+      <h2 class="section-title" style="margin-bottom:32px;">Обычная химия vs Эко-Чистота</h2>
+      <div class="comparison-grid reveal-group">
+        <div class="comparison-card bad reveal-item">
+          <h3>✕ Обычная бытовая химия</h3>
+          <ul>
+            <li><span style="color:#E53935;">✕</span> Токсичные компоненты в составе</li>
+            <li><span style="color:#E53935;">✕</span> Резкие запахи на весь день</li>
+            <li><span style="color:#E53935;">✕</span> Опасна при контакте с детьми</li>
+            <li><span style="color:#E53935;">✕</span> Не разлагается в природе</li>
+            <li><span style="color:#E53935;">✕</span> Аллергические реакции</li>
+          </ul>
+        </div>
+        <div class="comparison-card good reveal-item">
+          <h3>✓ Эко-Чистота</h3>
+          <ul>
+            <li><span style="color:#4CAF50;">✓</span> Натуральные биоразлагаемые компоненты</li>
+            <li><span style="color:#4CAF50;">✓</span> Без запаха или лёгкий аромат трав</li>
+            <li><span style="color:#4CAF50;">✓</span> Полностью безопасен для детей и животных</li>
+            <li><span style="color:#4CAF50;">✓</span> Разлагается за 28 дней</li>
+            <li><span style="color:#4CAF50;">✓</span> Гипоаллергенно, подходит всем</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-ab" id="value">
+    <div class="container">
+      <div class="section-label">Выгода</div>
+      <h2 class="section-title" style="margin-bottom:32px;">Что даёт семейный набор</h2>
+      <div class="value-grid reveal-group">
+        <div class="value-card reveal-item">
+          <div class="benefit-icon">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="28" fill="#E8F5E9"/>
+              <path d="M20 32c0-7 5-12 12-12s12 5 12 12v16H20V32z" fill="#4CAF50" opacity="0.15" stroke="#4CAF50" stroke-width="2"/>
+              <path d="M32 24v8l4 2" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Двойной запас</h3>
+          <p>Два набора хватает на месяц интенсивной уборки для дома площадью до 100 м²</p>
+        </div>
+        <div class="value-card reveal-item">
+          <div class="benefit-icon">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="28" fill="#E8F5E9"/>
+              <path d="M20 28c0-4 4-8 8-8m8 0c4 0 8 4 8 8" stroke="#4CAF50" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M28 28v-4a4 4 0 018 0v4" stroke="#4CAF50" stroke-width="2.5" fill="none"/>
+              <rect x="20" y="28" width="24" height="20" rx="4" fill="#4CAF50" opacity="0.15" stroke="#4CAF50" stroke-width="2"/>
+              <path d="M28 32h8" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+              <path d="M32 32v8" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Экономия 25%</h3>
+          <p>Покупая два набора сразу, вы экономите 700 ZCN — как получаете третий набор бесплатно</p>
+        </div>
+        <div class="value-card reveal-item">
+          <div class="benefit-icon">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="28" fill="#E8F5E9"/>
+              <path d="M48 24c-8-8-24-8-32 0" stroke="#4CAF50" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M44 28c-6-6-18-6-24 0" stroke="#4CAF50" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M40 32c-4-4-12-4-16 0" stroke="#4CAF50" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="32" cy="42" r="6" fill="#4CAF50" opacity="0.15" stroke="#4CAF50" stroke-width="2"/>
+              <path d="M30 42l2 2 3-3" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Бесплатная доставка</h3>
+          <p>Доставим набор бесплатно в любой регион. Отправка в день заказа при оформлении до 14:00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-ab" style="background:#F9FBF9;">
+    <div class="container">
+      <div class="section-label">Состав</div>
+      <h2 class="section-title" style="margin-bottom:32px;">Что внутри каждого набора</h2>
+      <div class="contents-grid reveal-group">
+        <div class="content-card reveal-item">
+          <div class="content-image" style="height:200px;">
+            <img src="image 2.jfif" alt="Средство для стёкол" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h3>Универсальный очиститель</h3>
+          <p>500 мл — для всех поверхностей</p>
+        </div>
+        <div class="content-card reveal-item">
+          <div class="content-image" style="height:200px;">
+            <img src="image 6.jfif" alt="Средство для стёкол" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h3>Средство для стёкол</h3>
+          <p>400 мл — без разводов</p>
+        </div>
+        <div class="content-card reveal-item">
+          <div class="content-image" style="height:200px;">
+            <img src="image 4.jfif" alt="Очиститель для кухни" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h3>Очиститель для кухни</h3>
+          <p>500 мл — удаляет жир и налёт</p>
+        </div>
+        <div class="content-card reveal-item">
+          <div class="content-image" style="height:200px;">
+            <img src="image 10.jfif" alt="Эко-аксессуары" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h3>Эко-аксессуары</h3>
+          <p>Микрофибра, губки, распылители</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-ab" id="faq">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title" style="margin-bottom:24px;">Часто задаваемые вопросы</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Подходит ли набор для семей с новорождёнными?
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-a">Да, набор полностью безопасен для детей с рождения. Все средства гипоаллергенны и не содержат токсичных веществ, летучих соединений и отдушек.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Как долго хватает одного набора?
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-a">Одного набора хватает на 2-3 недели регулярной уборки в квартире площадью 60-80 м². Семейного набора (два комплекта) — на месяц и более.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Можно ли вернуть набор?
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-a">Да, мы даём 30 дней на возврат. Если набор вам не подойдёт — вернём полную стоимость без вопросов.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Как осуществляется доставка?
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-a">Доставляем по всей стране. Бесплатно — при заказе от 1 500 ZCN. Отправляем в день заказа (при оформлении до 14:00). Срок доставки 2-5 дней.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer-banner" id="order-ab">
+    <div class="container offer-banner-inner">
+      <div class="offer-banner-left">
+        <div class="section-label" style="color:#A5D6A7;">Заказать</div>
+        <h2 class="section-title">Семейный набор со скидкой 25%</h2>
+        <p style="font-size:18px; color:rgba(255,255,255,0.8); margin-top:-24px;">2 100 ZCN вместо 2 800. Экономия 700 ZCN.</p>
+      </div>
+      <div class="offer-banner-right">
+        <a href="#order-form-section" class="ab-btn" style="font-size:18px; padding:18px 40px;">Заказать сейчас</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="order-form-section" style="background:#fff; padding:60px 0;">
+    <div class="container">
+      <div class="order-wrapper" style="grid-template-columns:1fr 1fr;">
+        <div class="order-content">
+          <div class="section-label">Оформление</div>
+          <h2 class="section-title" style="margin-bottom:24px;">Получите семейный набор</h2>
+          <div class="order-pricing" style="margin-bottom:16px;">
+            <div class="order-price-block">
+              <span class="price-current order-price" style="font-size:44px;">2 100 ZCN</span>
+              <span class="price-old">2 800 ZCN</span>
+            </div>
+            <div class="order-discount-badge">
+              <span class="discount-badge large">−25%</span>
+            </div>
+          </div>
+          <div style="margin:20px 0; border-radius:16px; overflow:hidden; max-width:320px; box-shadow:0 8px 24px rgba(0,0,0,0.06);">
+            <img src="image 9.jpeg" alt="Набор для уборки" style="width:100%; height:180px; object-fit:cover;">
+          </div>
+          <ul class="check-list" style="gap:12px;">
+            <li><span>2 полных набора эко-средств</span></li>
+            <li><span>Экономия 700 ZCN</span></li>
+            <li><span>Бесплатная доставка</span></li>
+            <li><span>Гарантия возврата 30 дней</span></li>
+          </ul>
+        </div>
+        <div class="order-form-wrapper">
+          <form class="order-form" id="abForm">
+            <h3>Оформить заказ</h3>
+            <div class="form-group">
+              <label for="ab-name">Ваше имя</label>
+              <input type="text" id="ab-name" name="name" placeholder="Иван" required>
+            </div>
+            <div class="form-group">
+              <label for="ab-contact">Телефон или Email</label>
+              <input type="text" id="ab-contact" name="contact" placeholder="+7 999 123-45-67" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Заказать семейный набор</button>
+            <p class="form-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+          </form>
+          <div class="form-success" id="abSuccess">
+            <div class="success-icon">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" fill="#E8F5E9"/><path d="M20 32l8 8 16-16" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Спасибо за заказ!</h3>
+            <p>Мы свяжемся с вами для подтверждения и отправим набор в ближайшее время.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer-ab" style="background:#1B5E20;">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo" style="color:#fff;">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="15" fill="#4CAF50"/>
+          <path d="M16 6C11 6 8 10 8 14c0 5 4 12 8 12s8-7 8-12c0-4-3-8-8-8z" fill="white" opacity="0.9"/>
+          <path d="M13 15l2 2 4-4" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Эко<span style="color:#A5D6A7;">Чистота</span></span>
+      </a>
+      <p style="color:rgba(255,255,255,0.6);">Экологичные средства для чистой и безопасной уборки вашего дома.</p>
+    </div>
+    <div class="footer-links">
+      <h4 style="color:#fff;">Информация</h4>
+      <a href="#" style="color:rgba(255,255,255,0.6);">О компании</a>
+      <a href="#" style="color:rgba(255,255,255,0.6);">Доставка и оплата</a>
+      <a href="#" style="color:rgba(255,255,255,0.6);">Гарантия возврата</a>
+      <a href="#" style="color:rgba(255,255,255,0.6);">Политика конфиденциальности</a>
+    </div>
+    <div class="footer-links">
+      <h4 style="color:#fff;">Контакты</h4>
+      <a href="mailto:hello@ecochistota.zcn" style="color:rgba(255,255,255,0.6);">hello@ecochistota.zcn</a>
+      <a href="tel:+79991234567" style="color:rgba(255,255,255,0.6);">+7 999 123-45-67</a>
+    </div>
+  </div>
+  <div class="footer-bottom" style="border-color:rgba(255,255,255,0.08);">
+    <div class="container">
+      <p style="font-size:13px; text-align:center; color:rgba(255,255,255,0.4);">&copy; 2025 Эко-Чистота. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#order-form-section" class="sticky-ab">🎁 Заказать со скидкой 25%</a>
+
+<script>
+function toggleFaq(el) {
+  el.classList.toggle('active');
+  var answer = el.nextElementSibling;
+  answer.classList.toggle('open');
+}
+
+(function() {
+  var h = 23, m = 59, s = 59;
+  var hEl = document.getElementById('timer-hours');
+  var mEl = document.getElementById('timer-minutes');
+  var sEl = document.getElementById('timer-seconds');
+  if (!hEl) return;
+  setInterval(function() {
+    s--;
+    if (s < 0) { s = 59; m--; }
+    if (m < 0) { m = 59; h--; }
+    if (h < 0) { h = 23; m = 59; s = 59; }
+    hEl.textContent = String(h).padStart(2, '0');
+    mEl.textContent = String(m).padStart(2, '0');
+    sEl.textContent = String(s).padStart(2, '0');
+  }, 1000);
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  var items = document.querySelectorAll('.reveal-item');
+  if (items.length) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    items.forEach(function(el) { obs.observe(el); });
+  }
+
+  var forms = document.querySelectorAll('.order-form');
+  forms.forEach(function(f) {
+    f.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var s = this.parentElement.querySelector('.form-success');
+      if (s) { this.style.display = 'none'; s.style.display = 'block'; }
+    });
+  });
+});
+</script>
+</body>
+</html>
