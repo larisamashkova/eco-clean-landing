@@ -37,6 +37,6 @@ site2/
 - **Акцент скидки:** #FF6B35
 - **Шрифт:** System UI (sans-serif)
 
-## Запуск
+## DEMO
 
-Откройте `index.html` или `index2.html` в любом современном браузере.
+https://larisamashkova.github.io/eco-clean-landing/
